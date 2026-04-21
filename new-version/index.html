@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leafole Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-left">
+            <a href="https://leafole.dev">Leafole</a>ㅤ
+            <a href="https://github.com/leafole-labs/leafole-panel">Código Fonte</a>ㅤ
+            <a href="infos.html">Informações</a>
+        </div>
+        <div class="topbar-right">
+            <button class="editor-btn" onclick="toggleEditor()">Editar Apps</button>
+        </div>
+    </div>
+    <div class="content">
+        <start>
+            <!-- Serviços carregados dinamicamente do apps.json -->
+        </start>
+    </div>
+    <div class="bar">
+        <a href="#" onclick="toggleMenu(); return false;">Menu</a>
+    </div>
+    
+    <div id="menu" class="menu">
+        <div class="menu-header">
+            <h2>Mais Aplicativos</h2>
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <div id="menu-content" class="menu-content">
+            <!-- Serviços não-pinned carregados aqui -->
+        </div>
+    </div>
+    
+    <div id="editor-modal" class="editor-modal">
+        <div class="editor-container">
+            <div class="editor-header">
+                <h2>Editor JSON</h2>
+                <button class="close-btn" onclick="toggleEditor()">✕</button>
+            </div>
+            <textarea id="json-editor" class="json-editor" placeholder="Edite o JSON aqui..."></textarea>
+            <div class="editor-footer">
+                <button class="btn btn-save" onclick="saveJSON()">Salvar</button>
+                <button class="btn btn-cancel" onclick="toggleEditor()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
